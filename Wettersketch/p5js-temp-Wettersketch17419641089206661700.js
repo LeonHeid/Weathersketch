@@ -101,10 +101,9 @@ function Drop(x, y, sp) {
   var s = sp;
 
   this.displ = function() {
-    // converts mouse position. could also use map() to avoid mx <= 0
     var mx = mouseX / 120;
     if (mx <= 0) {
-      mx = 0.5; // default, works as a failsafe. old one was too slow for me
+      mx = 1;
     }
     
     y1 = y1 + s * mx; // scales speed according to mouse position
